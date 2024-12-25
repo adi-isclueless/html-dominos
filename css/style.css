@@ -17,6 +17,14 @@ body{
   margin-bottom: 5px;
 }
 
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .car {
   margin-top: 20vh; !important;
   gap: 20px;
@@ -42,12 +50,25 @@ body{
 }
 
 .myrow{
+  gap: 25px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  touch-action: pan-x;
   width: 100%;
   overflow: scroll;
   margin: 0;
   display: flex;
   justify-content: flex-start;
 }
+
+.card {
+  flex: 0 0 auto; /* Prevent flex-grow and flex-shrink */
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+}
+
+
 
 .mynavbar nav {
   margin-right: 20px;
@@ -65,6 +86,7 @@ body{
 @media (max-width: 999px)
 {
   .flex-container-c {
+    overflow: hidden;
     margin: 0;
     padding: 0;
     display: flex;
@@ -75,6 +97,7 @@ body{
     display: none;
   }
   .flex-container-c2 {
+    overflow: auto; /* Allows scrolling for this container */
     margin-top: 10vh;
     margin-left: 20px;
     padding: 0;
@@ -92,7 +115,7 @@ body{
     align-items: flex-start;
   }
   .flex-container-c2 {
-    overflow: hidden;
+    overflow: auto; /* Ensure this container scrolls independently */
     margin-top: 10vh;
     margin-left: 220px;
     padding: 0;
